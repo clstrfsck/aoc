@@ -18,11 +18,11 @@ private fun List<String>.isCrossMas() = all { it == "MAS" || it == "SAM" }
 
 fun main() {
     val lines = File("y24/y24d04.txt").readLines()
-    val grid = lines.indices.map { y -> lines[y].indices.map { x -> P2D(y, x) to lines[y][x] } }.flatten().toMap()
+    val grid = lines.indices.flatMap { y -> lines[y].indices.map { x -> P2D(y, x) to lines[y][x] } }.toMap()
 
-    val result1 = grid.entries.filter { it.value == 'X' }.sumOf { grid.wordsPart1(it.key).count { it == "XMAS" } }
+    val result1 = grid.filterValues { it == 'X' }.keys.sumOf { grid.wordsPart1(it).count { it == "XMAS" } }
     println("Result 1: $result1")
 
-    val result2 = grid.entries.filter { it.value == 'A' }.map { grid.wordsPart2(it.key) }.count { it.isCrossMas() }
+    val result2 = grid.filterValues { it == 'A' }.keys.map { grid.wordsPart2(it) }.count { it.isCrossMas() }
     println("Result 2: $result2")
 }

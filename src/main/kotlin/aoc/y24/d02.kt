@@ -14,5 +14,5 @@ fun main() {
     println("Result 1: $result1")
 
     val result2 = items.count { it.isMostlySafe() }
-    println("Result 1: $result2")
+    println("Result 2: $result2")
 }
