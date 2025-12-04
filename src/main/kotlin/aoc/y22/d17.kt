@@ -79,7 +79,6 @@ fun parseLine(line: String) = line.toList().map { ch ->
 
 fun main() {
     val line = File("y22/y22d17.txt").readLines().first()
-//    val line = ">>><<><>><<<>><>>><<<>>><<<><<<>><>><<>>"
 
     val result1 = Tower(parseLine(line)).let { tower ->
         repeat(2022) { tower.addBlock() }

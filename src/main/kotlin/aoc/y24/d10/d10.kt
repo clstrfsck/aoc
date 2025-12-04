@@ -1,4 +1,4 @@
-package aoc.y24
+package aoc.y24.d10
 
 import java.io.File
 

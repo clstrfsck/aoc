@@ -1,4 +1,4 @@
-package aoc.y24
+package aoc.y24.d01
 
 import java.io.File
 import kotlin.math.abs
@@ -13,5 +13,5 @@ fun main() {
     println("Result 1: $result1")
 
     val result2 = list2.groupingBy { it }.eachCount().let { f -> list1.sumOf { it * (f[it] ?: 0) } }
-    println("Result 1: $result2")
+    println("Result 2: $result2")
 }
