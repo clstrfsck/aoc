@@ -42,7 +42,6 @@ fun main() {
         sortedEdges.take(1000).forEach { union(it.u, it.v) }
         points.indices.groupBy { find(it) }.values.map { it.size }.sortedDescending().take(3).reduce(Int::times)
     }
-
     println("Result1: $result1")
 
     val result2 = UnionFind(points.size).run {

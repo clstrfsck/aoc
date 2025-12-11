@@ -17,6 +17,7 @@ repositories {
 
 dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2")
+    implementation("com.google.ortools:ortools-java:9.14.6206")
     implementation("org.openpnp:opencv:4.9.0-0")
 
     testImplementation(kotlin("test"))
